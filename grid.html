@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid Practice</title>
+  </head>
+  <body style="padding-bottom: 1000px;"> <!--Adds space to the bottom of webpage-->
+    <!--Divs are defaulted to block but if the div is placed inside a grid, it only takes up the column of the grid-->
+    <!--No space between the two divs-->
+    <!--Adding more elements to one div makes it grow vertically along with the other div: GRIDS ARE BETTER FOR ALIGNMENT-->
+    <div style="
+      display: grid;
+      grid-template-columns: 100px 100px; 
+    ">
+      <!--Inline style: Style attribute lets us write css inside. But usually would put CSS in separate file -->
+      <div style="background-color: lightblue;">div 1</div>
+      <div style="background-color: pink;">div 2<p>text</p></div>
+    </div>
+
+    <!--For grids, number of values (px) shows number of columns and the values specifies the width of column. Make sure to create the other column in the nested div-->
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 100px 200px;
+    ">
+      <div style="background-color: lightblue;">100px</div>
+      <div style="background-color: pink;">100px<p>text</p></div>
+      <div style="background-color: lightblue;">200px</div>
+      <div style="background-color: pink;">100px</div> <!--Having more elements than columns makes it wrap around to a new row -->
+    </div>
+
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+    ">
+      <div style="background-color: lightblue;">100px</div>
+      <div style="background-color: pink;">1fr</div> <!--1 fr takes up remaining free space of the page (adjusts based on website size)-->
+    </div>
+
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr 2fr; 
+    ">
+      <div style="background-color: lightblue;">100px</div>
+      <div style="background-color: pink;">1fr</div> <!--1/3 of remaining space-->
+      <div style="background-color: lightblue;">2fr</div> <!--2/3 of remaining space-->
+    </div>
+
+    <!--Column-gap: Space between each column -->
+    <!--Row-gap: Space between each row -->
+    <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; 
+      column-gap: 20px; 
+      row-gap: 40px;
+    ">
+      <div style="background-color: lightblue; height:200px">1fr</div>
+      <div style="background-color: pink; height:200px">1fr</div> <!--1/3 of remaining space-->
+      <div style="background-color: lightblue; height:200px">1fr</div> <!--2/3 of remaining space-->
+      <div style="background-color: pink; height:200px">1fr</div>
+      <div style="background-color: lightblue; height:200px">1fr</div> <!--2/3 of remaining space-->
+      <div style="background-color: pink; height:200px">1fr</div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,12 @@
+/* Target all paragraphs with this font stack (If Roboto doesn't load, it uses backup font Arial. Make sure not to use the "." */
+p { 
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body{
+  margin: 0; /*Sets all margins in all directions to 0*/
+  padding-top: 80px; /* Adds space to top of page so that floating header doesnt cover content*/
+  padding-left: 80px;
+}

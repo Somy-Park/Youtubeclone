@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Position Practice</title>
+</head>
+
+<!--The webpage is 3000 px tall-->
+<!--Add space to the top of the page using padding (can use margin but not best practice) so header doesn't cover top content-->
+<body style="
+  height: 3000px;
+  padding-top: 60px;
+  padding-left: 80px;
+">
+  <!-- "fixed" position = The header element sticks to the page while scrolling and floats on the page-->
+  <!-- "top, left, right, botttom" = how far away element is from top, left, right, bottom of window -->
+  <!-- Doing left and right or top and bottom stretches the entire element-->
+  <!-- If you don't want something to resize, instead of using bottom, (or other 3), just use height and width to define the element -->
+  <div style="
+    background-color: black;
+    color: white;
+    position: fixed; 
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 50px;
+    z-index: 100;
+  ">header</div>
+
+  <!--Position fixed (placed on browser window) values specifies pixels away from the edge of BROWSER WINDOW (Element will stay even when scrolled) -->
+  <!--z index determine which elements appear in front and which behind (higher z-index appear in front)-->
+  <!--Position ABSOLUTE inside Position FIXED element = takes values relative to the fixed element, not the page anymore (good for placing it in corners of elements) -->
+  <div style="
+    background-color: green;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 72px;
+  ">sidebar
+    <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      right: 0px;
+      top: 0px;
+  ">
+    X
+  </div>
+  
+</div>
+
+  <!--Position absolute (placed on page) values specifies pixels away from the edge of PAGE (Element will move away from browswer window if scrolled) -->
+  <!--Since this is written below header, it appears in front of elements above -->
+  <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 60px;
+  ">
+    absolute
+  </div>
+
+  <div style="
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+  ">Div 1</div>
+
+  <!--Static position is default. -->
+  <!--Position ABSOLUTE inside position RELATIVE (need to state this for inner element to appear). Adjust inside relative to the outer element-->
+  <!--Position relative causes everything to display normally-->
+  <div style ="
+    background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    position: relative;
+  ">
+    Div 2
+      <div style="
+      position: absolute;
+      background-color: black;
+      color: white;
+      right: 10px;
+      bottom: 10px;
+    ">
+      5:00
+    </div>
+  </div>
+</body>
+</html>

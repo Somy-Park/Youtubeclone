@@ -1,0 +1,41 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: white;
+  width: 72px;
+  z-index: 200; /* To make sidebar on top of header */
+  padding-top: 5px;
+}
+
+.sidebar-link {
+  height: 74px;
+  display: flex; 
+  justify-content: center; /* Center elements horizontally (for flex-direction row). Center elements vertically (for flex-direction column) */
+  align-items: center; /* Center elements vertically (for flex-direction row). Center elements horizontally (for flex-direction row)*/
+  flex-direction: column; /* Since default is row (elements inside displayed next to each other). Change to column to display elements above each other */
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+/* Comma: target all elements with the sidebar-link class AND a header class*/
+.sidebar-link,
+.header {
+
+}
+
+/* Space: taget all images INSIDE all sidebar-link classes */
+.sidebar-link img {
+
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.sidebar-link div {
+  font-family: Roboto, Arial;
+  font-size: 10px;
+}

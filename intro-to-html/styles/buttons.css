@@ -1,0 +1,68 @@
+.subscribe-button {
+  background-color: rgb(200, 0, 0);
+  color: white; /* color = font color */
+  border: none;
+  border-radius: 2px; /* Bigger border radius makes border more round */
+  cursor: pointer; /* Changes the cursor into a pointing finger when hovering over button */
+  margin-right: 8px; /* Margin: Space outside the button (use to separate from other elements) */
+  margin-left: 20px;
+  padding-top: 10px; /* Padding: Space between text inside button and border of button */
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: opacity 0.15s; /* When hovering over button, transition the opacity over 0.15 secs*/
+  vertical-align: top;
+}
+
+/* Pseudo classes */
+.subscribe-button:hover { /* Style applies only when hovering over the button */ 
+  opacity: 0.8;
+}
+.subscribe-button:active { /* Style applies only when clicking on the button */
+  opacity: 0.4;
+}
+
+.join-button {
+  background-color: white;
+  border-color: rgb(6, 95, 212);
+  border-style: solid;
+  border-width: 1px;
+  color: rgb(79, 156, 250);
+  border-radius: 2px;
+  cursor: pointer;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: background-color 0.15s,
+    color 0.15s;
+}
+
+.join-button:hover {
+  background-color:rgb(6, 95, 212) ; /* Switches background and font color after hovering */
+  color: white;
+}
+
+.join-button:active {
+  opacity: 0.7;
+}
+
+.tweet-button {
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  height: 36px;
+  width: 74px;
+  border-radius: 18px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+  vertical-align: top;
+}
+
+.tweet-button:hover {
+  /*Create shadow 5px right, 5px bottom, 10px blur, color black */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}

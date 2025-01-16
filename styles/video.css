@@ -1,0 +1,58 @@
+.thumbnail { 
+  /* Width property: Height automatically resizes to keep the image's dimensions. Width: 100% = image takes up entire container so block element not necessary */
+  width: 100%; 
+}
+
+.video-title { /* Paragraphs are by default block eleements */
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500; /* A medium bold font value */
+  line-height: 20px; /* Space between the lines of the text */
+  margin-bottom: 12px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-picture {
+  width: 40px;
+  border-radius: 50px;
+}
+
+/* In html, this is written below header AND position is NOT static so it appears in front of header. The other elements (even though written below) is position STATIC (default) so it always appears at the BACK! */
+.thumbnail-row {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.video-author, .video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+/* In html, */
+.video-time {
+  font-family: Roboto, Arial;
+  font-size: 12px;
+  font-weight: 500px;
+  padding: 4px; /* does padding of 4px on all sides */
+  border-radius: 2px;
+  background-color: black;
+  color: white;
+  position: absolute; /* Since time is inside the div of class "thumbnail-row", positioning is relative to this element */
+  bottom: 8px;
+  right: 5px;
+}
